@@ -1,0 +1,27 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.wrapper {
+    background:lightblue;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background: white;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    width: 70vw;
+}
+
+.Buttons {
+  margin: 10px;
+  height: 10%;
+  width: 30vw;
+}
