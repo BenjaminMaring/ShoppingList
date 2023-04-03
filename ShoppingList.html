@@ -1,4 +1,3 @@
-<!-- This is the Interface page for the shopping list-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +13,20 @@
     <div class="wrapper">
         <div class="menu">
             <div class="ButtonWrapper">
-                <button onclick="loadList()">Load Previous List</button>
-                <button onclick="saveList()">Save List</button>
+                <button class="Button" onclick="loadList()">Load Previous List</button>
+                <button class="Button" onclick="saveList()">Save List</button>
             </div>
             <div id="listName" class="title"> 
                 <h2 style="margin-right: 5px;">List Name: </h2>
-                <input id="nameInput" type="text"></input>
+                <input style="min-width:45vw;"id="nameInput" type="text" placeholder="Enter List Name Here">
+            </div>
+            <div class="addItems">
+                <input class="addItem" id="item" style="width: 15vw;" type="text" Placeholder="Item">
+                <input class="addItem" id="quantity" style="width: 15vw;" type="text" Placeholder="Quantity">
+                <button class="addButton" onclick="addItem(document.getElementById('item').value, document.getElementById('quantity').value)">Add Item</button>
+            </div>
+            <div class="listSection">
+
             </div>
         </div>
     </div>
