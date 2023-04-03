@@ -10,7 +10,7 @@
     <script language="javascript">
         var temp = ["item1", "item2", "item3"]
         function loadList() {
-            document.getElementById(list).html.replace(test);
+            document.getElementById(list).innerHTML.replace(test);
         }
         function saveList() {
 
@@ -22,9 +22,13 @@
 <body>
     <div class="wrapper">
         <div class="menu">
-            <button class="Buttons" onclick="loadList()">Load Previous List</button>
-            <button class="Buttons" onclick="saveList()">Save List</button>
-            <form id="list"></form>
+            <div class="Buttons">
+                <button style="width: 25vw; font-family:Verdana; font-size: 19px; background-color: rgb(186, 211, 220);" onclick="loadList()">Load Previous List</button>
+                <button style="width: 25vw; font-family:Verdana; font-size: 19px; background-color: rgb(186, 211, 220);" onclick="saveList()">Save List</button>
+            </div>
+            <div id="list">
+                test
+            </div>
         </div>
     </div>
 </body>

@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
 }
+
 .wrapper {
     background:lightblue;
     height: 100vh;
@@ -9,19 +10,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .menu {
-    background: white;
-    border: 3px solid black;
+    background: rgb(241, 239, 239);
+    border: 3px solid rgb(98, 97, 97);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     height: 80vh;
     width: 70vw;
 }
 
 .Buttons {
-  margin: 10px;
-  height: 10%;
-  width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    height: 10vh;
+    width: 60vw;
 }
