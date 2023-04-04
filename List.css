@@ -3,7 +3,6 @@
     margin: 0px;
 }
 
-
 input{
     border: none;
     border-bottom: 2px solid black;
@@ -16,6 +15,11 @@ input:focus {
     outline: none;
     background-color: rgb(241, 239, 239);
 }
+
+ h3 {
+    font-family: verdana;
+    font-size: 16px;
+ }
 
 /* Below are all of the classes */
 
