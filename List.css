@@ -16,10 +16,9 @@ input:focus {
     background-color: rgb(241, 239, 239);
 }
 
- h3 {
-    font-family: verdana;
-    font-size: 16px;
- }
+body {
+    counter-reset: section;
+}
 
 /* Below are all of the classes */
 
@@ -27,15 +26,16 @@ input:focus {
     width: 25vw; 
     font-family: Verdana; 
     font-size: 19px; 
-    background-color: rgb(152, 219, 163);
+    background-color: rgb(88, 241, 113);
 }
 
 .Button:hover {
-    background-color: lightblue;
+    background-color: rgb(39, 118, 244);
+    color: white;
 }
 
 .wrapper {
-    background:lightblue;
+    background:rgb(39, 118, 244);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -46,12 +46,12 @@ input:focus {
 
 .menu {
     background: rgb(241, 239, 239);
-    border: 3px solid rgb(98, 97, 97);
+    border: 2px solid rgb(98, 97, 97);
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
-    width: 70vw;
+    height: 90vh;
+    width: 80vw;
 }
 
 .ButtonWrapper {
@@ -59,7 +59,7 @@ input:focus {
     justify-content: space-around;
     margin: 10px;
     height: 10vh;
-    width: 60vw;
+    width: 70vw;
 }
 
 .title{
@@ -72,7 +72,7 @@ input:focus {
     justify-content: space-evenly;
     margin: 5px;
     padding: 5px;
-    min-width: 55vw;
+    min-width: 65vw;
 }
 
 .addItem {
@@ -83,9 +83,45 @@ input:focus {
     width: 15vw;
     font-family: Verdana; 
     font-size: 19px; 
-    background-color: rgb(152, 219, 163);
+    background-color: rgb(88, 241, 113);
 }
 
 .addButton:hover {
-    background-color: lightblue;
+    
+    background-color: rgb(39, 118, 244);
+    color: white;
 }
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-color: rgb(221, 88, 88);
+}
+
+.listItem {
+    display: flex;
+    height: 5vh;
+    margin-left: 35px;
+}
+
+.listItem:before {
+    counter-increment: section;
+    font-family: verdana;
+    content: counter(section) ".";
+    position: absolute;
+    margin-left: -26px;
+}
+
+.listSection {
+    margin: 5px;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.listWrapper {
+    border: solid 3px black;
+    height: 60vh;
+    width: 65vw;
+}
+
