@@ -16,10 +16,6 @@ input:focus {
     background-color: rgb(241, 239, 239);
 }
 
-body {
-    counter-reset: section;
-}
-
 /* Below are all of the classes */
 
 .Button {
@@ -96,22 +92,15 @@ body {
     width: 20px;
     height: 20px;
     margin-left: 5px;
+    margin-right: 5px;
     background-color: rgb(221, 88, 88);
 }
 
 .listItem {
     display: flex;
     height: 5vh;
-    margin-left: 35px;
 }
 
-.listItem:before {
-    counter-increment: section;
-    font-family: verdana;
-    content: counter(section) ".";
-    position: absolute;
-    margin-left: -26px;
-}
 
 .listSection {
     margin: 5px;

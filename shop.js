@@ -1,5 +1,8 @@
+var tracker = -1;
+
 class listItem {
-    itemNum=0;
+    itemID;
+    itemName;
 } 
 
 function loadList() {
@@ -10,28 +13,37 @@ function saveList() {
             
 }
 
-function addItem(item, quantity) {
+function addItem(food, quantity) {
 
-    var liElement = document.createElement('li');
-    liElement.className = "listItem";
+    //creates an object of listItem and assigns values
+    var item = new listItem();
+    item.itemID = tracker +1;
+    item.itemName = food + " " + quantity;
 
-    var h3Element = document.createElement('p');
-    var textNode = document.createTextNode(item + " " + quantity);
-    h3Element.appendChild(textNode);
+    //Initialize the div that other elements will be added to
+    var divElement = document.createElement('div');
+    divElement.className = "listItem";
 
+    //initializes and assign text into the parent div
+    var pElement = document.createElement('p');
+    var textNode = document.createTextNode(item.itemID + ". " + item.itemName);
+    pElement.appendChild(textNode);
+
+    //initialize the checkbox 
     var inputElement = document.createElement('input');
     inputElement.className = "checkbox";
     inputElement.type ="checkbox"
 
-    liElement.appendChild(h3Element);
-    liElement.appendChild(inputElement);
+    //assigns the text and checkbox to the parent div
+    divElement.appendChild(pElement);
+    divElement.appendChild(inputElement);
 
+    //inserts the div into the list on the webpage
     var list = document.querySelector('.listSection');
-    list.appendChild(liElement);
-    
+    list.appendChild(divElement);
 }
 
 function removeItem(section) {
-    var elementR = document.getElementById(section);
+    
     
 }
