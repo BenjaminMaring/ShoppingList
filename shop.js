@@ -25,8 +25,9 @@ function AddItem(food, quant) {
 
     //This code creates the div element out of the object
     divElement.className="listItem";
-    divElement.insertAdjacentHTML("beforeend", item.itemID + ". " + item.itemName + ", " + item.quantity);
-    divElement.insertAdjacentHTML("beforeend", "<input type='checkbox' class='checkb'></input><button class='deleteB'></button>");
+    divElement.id=item.itemID;
+    divElement.insertAdjacentHTML("beforeend","•" + item.itemName + ", " + item.quantity);
+    divElement.insertAdjacentHTML("beforeend", "<input type='checkbox' class='checkb'></input><button onClick='removeItem(" + item.itemID + ")'class='deleteB'></button>");
 
     //inserts the div into the list on the webpage
     var list = document.querySelector('.listSection');
@@ -34,6 +35,6 @@ function AddItem(food, quant) {
 }
 
 function removeItem(section) {
-    
-    
+    var element = document.getElementById(section);
+    element.parentNode.removeChild(element);
 }
